@@ -59,6 +59,13 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- These need to be set for cases when treesitter
+-- indentation doesn't work properly and is disabled:
+--   - Dart
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.cindent = true
+
 -- Make line numbers default
 vim.opt.number = true
 -- vim.opt.relativenumber = true
@@ -858,7 +865,7 @@ require('lazy').setup({
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = { 'ruby' },
       },
-      indent = { enable = true, disable = { 'ruby' } },
+      indent = { enable = true, disable = { 'dart', 'ruby' } },
     },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
