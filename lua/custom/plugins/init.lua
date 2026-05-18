@@ -17,7 +17,17 @@ return {}
 
 -- Edits to init.lua
 --------------------
--- enable guess-indent properly:
---   config = function()
---     require('guess-indent').setup {}
---   end,
+-- Enable guess-indent properly with:
+--    opts = {},
+--
+-- Add languages to Mason:
+--    vim.list_extend(ensure_installed, {
+--      ...
+--      'htmlbeautifier',
+--    })
+--
+-- Set formatters for conform:
+--    formatters_by_ft = {
+--      ...
+--      html = { 'htmlbeautifier' }
+--    }
